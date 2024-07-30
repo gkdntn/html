@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>foodshop</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font: normal 12px 'noto sans korean';
+        }
+
+        ul, ol {list-style: none;}
+        a {text-decoration: none; color: #111;}
+
+        #wrapper {
+            width: 100%;
+            height: 100%;
+            box-sizing: border-box;
+        }
+        header {
+            width: 100%;
+            height: auto;
+            box-sizing: border-box;
+        }
+        header > div {
+            width: 100%;
+            box-sizing: border-box;
+        }
+        header > div:nth-child(1){height: 36px;
+        border-bottom: 1px solid gray;}
+        header > div:nth-child(2){height: 100px;}
+        header > div:nth-child(3){height: 54px;}
+
+        header > div:nth-child(1)>div{
+            margin: 0 auto;
+            width: 1100px;
+            height: 34px;
+            box-sizing: border-box;
+        }
+        header > div:nth-child(1)>div > p{
+            float: right;
+            margin-top: 10px;
+            letter-spacing: 0px;
+        }
+
+        header > div:nth-child(2)>article{
+            margin: 0 auto;
+            width: 1100px;
+            height: 98px;
+            box-sizing: border-box;
+            position: relative;
+        }
+
+
+        header > div:nth-child(2)>article > .shopping {
+            left: 10px;
+            bottom: 10px;
+            position: absolute;
+        }
+        header > div:nth-child(2)>article > .shopping >span:nth-of-type(1){
+            color: #ff6a00;
+            font-size: 15px;
+            font-weight: 500;
+        }
+        header > div:nth-child(2)>article > .shopping >span:nth-of-type(2){
+            font-size: 12px;
+        }
+        header > div:nth-child(2)>article > .title {
+            position: absolute;
+            left: 50%; 
+            margin-left: -173px;
+            top: 20px;
+
+        }
+        header > div:nth-child(2)>article > .one {
+            position: absolute;
+            right: 0;
+            bottom: 20px;
+        }
+
+        header > div:nth-child(3)>nav{
+            margin: 0 auto;
+            width: 1100px;
+            height: 52px;
+            box-sizing: border-box;
+        }
+
+        header > div:nth-child(3) {
+            background-color: #40382e;
+        }
+
+        header > div:nth-child(3)>nav>ul {
+            width: 100%;
+            height: 100%;
+        }
+        header > div:nth-child(3)>nav li {
+            float: left;
+            width: 11.11%;
+            height: 100%;
+        }
+        header > div:nth-child(3)>nav li > a{
+            display: block;
+            width: 100%;
+            height: 100%;
+            text-align: center;
+            line-height: 54px;
+            font-size: 15px;
+            font-weight: bold;
+            color: #fff;
+        }
+
+        main {
+            width: 100%;
+            height: auto;
+            box-sizing: border-box;
+        }
+        main > section {
+            width: 100%;
+            box-sizing: border-box;
+        }
+        .slider {height: 352px;}
+        .go{height: 520px;}
+        .oneday{height: 190px;}
+        .vegetable{height: 660px;}
+        .premium{height: 200px;}
+        .seafood{height: 660px;}
+
+        main > section > article {
+            margin: 0 auto;
+            width: 1100px;
+            height: 100%;
+        }
+        .slider {
+            background: #ffeed4;
+        }
+
+        .slider > article {
+            height: 350px;
+            background-image:url(./images/slider_banner1.jpg);
+        }
+
+
+
+        main > .go > article {
+            padding: 30px 10px;
+            box-sizing: border-box;
+            
+        }
+
+
+        .go > article > .banner {
+            float: left;
+            position: relative;
+        }
+        
+        .go .banner1{
+            width: 412px;
+            height: 450px;
+            background-image:url(./images/main_go_bg1.png)}
+        .go .banner2{width: 322px; height: 220px; margin-left: 11px;
+            background-image:url(./images/main_go_bg2.png)}
+        .go .banner3{width: 322px; height: 220px; float: right;
+            background-image:url(./images/main_go_bg3.png)}
+        .go .banner4{width: 322px; height: 220px; margin-left: 11px; margin-top: 10px;
+            background-image:url(./images/main_go_bg4.png)}
+        .go .banner5{width: 322px; height: 220px; float: right; margin-top: 10px;
+            background-image:url(./images/main_go_bg5.png)}
+
+
+        .go > article > .banner1 > a {
+            position: absolute;
+            left: 36px;
+            top: 26px;
+        }
+        .go > article a > .category {
+            font-weight: bold;
+            font-size: 16px;
+            color: #ff6312;
+        }
+
+        .go > article a > .title {
+            font-size: 24px;
+            color: #fcfffd;
+            margin-top: 10px;
+            margin-bottom: 10px;
+            line-height: 30px;
+        }
+
+        .go > article a > .title > i {
+            display: block;
+            margin-top: 24px;
+            font-size: 14px;
+        }
+
+        .oneday > article {
+            height: 188px;
+        }
+
+        .vegetable > article {
+            height: 660px;
+        }
+        .vegetable ul {
+            width: 100%;
+            height: 312px;
+            border: 1px solid gray;
+            box-sizing: border-box;
+            overflow: hidden;
+        }
+        .vegetable ul > li {
+            width: 25%;
+            height: 100%;
+            border: 1px solid pink;
+            box-sizing: border-box;
+            float: left;
+        }
+
+        .premium > article {
+            height: 198px;
+        }
+        .seafood > article {
+            height: 658px;
+        }
+        .seafood ul {
+            width: 100%;
+            height: 312px;
+            border: 1px solid gray;
+            box-sizing: border-box;
+            overflow: hidden;
+        }
+
+        .seafood ul > li {
+            width: 25%;
+            height: 100%;
+            border: 1px solid pink;
+            box-sizing: border-box;
+            float: left;
+        }
+
+        footer {
+            width: 100%;
+            height: auto;
+            border: 1px solid blue;
+            box-sizing: border-box;
+        }
+        
+        footer > div{
+            width: 100%;
+            border: 1px solid green;
+            box-sizing: border-box;
+        }
+
+        footer > div:nth-child(1) {
+            height: 50px;
+        }
+        footer > div:nth-child(2) {
+            height: 156px;
+        }
+
+        footer > div > div {
+            margin: 0 auto;
+            width: 1100px;
+            border: 1px solid orange;
+            box-sizing: border-box;
+        }
+        footer > div:nth-child(1) > div{
+            height: 48px;
+        }
+        footer > div:nth-child(2) > div{
+            height: 154px;
+        }
+
+    </style>
+
+</head>
+<body>
+    <div id="wrapper">
+        <header>
+            <div>
+                <div>
+                    <p>
+                    <a href="#">로그인ㅣ</a>
+                    <a href="#">마이페이지ㅣ</a>
+                    <a href="#">관심상품(0)ㅣ</a>
+                    <a href="#">장바구니(0)</a>
+                    </p>
+                </div>
+            </div>
+            <div>
+                <article>
+                    <a href="#" class="shopping">
+                        <img src="./images/ico_shopping.png" alt="트럭">
+                        <span>SHOPPING</span>
+                        <span>주문조회 바로가기</span>
+                    </a>
+                    <a href="#" class="title">
+                        <img src="./images/header_txt_logo.png" alt="제목">
+                    </a>
+                    <a href="#" class="one">
+                        <img src="./images/header_txt_onday.png" alt="원가">
+                    </a>
+                </article>
+            </div>
+            <div>
+                <nav>
+                    <ul>
+                        <li><a href="#">채소/과일/곡류</a></li>
+                        <li><a href="#">수산</a></li>
+                        <li><a href="#">정육/달걀</a></li>
+                        <li><a href="#">면/양념/소스</a></li>
+                        <li><a href="#">음료/주류</a></li>
+                        <li><a href="#">냉장/냉동식품</a></li>
+                        <li><a href="#">캔/통조림</a></li>
+                        <li><a href="#">가공/간편식품</a></li>
+                        <li><a href="#">생활잡화</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <main>
+            <section class="slider">
+                <article></article>
+            </section>
+            <section class="go">
+                <article>
+                    <div class="banner banenr1">
+                        <a href="#">
+                            <span class="category">생활야채</span>
+                            <p class="title">
+                                1일 1야채<br>
+                                건강한 생활습관
+
+                                <i>
+                                    아삭아삭 건강에도 좋은<br>
+                                    야채를 1일 1야채로<br>
+                                    생활에 활기를 느껴보세요!
+                                </i>
+                            </p>
+                            <img src="./images/main_go_ico.png" alt="go"/>
+                        </a>
+                    </div>
+                    <div class="banner banner2">
+                        <a href="#">
+                            <span class="category2">특별 이벤트</span>
+                            <p class="titledark">
+                                SHOP에서 진행하는<br>
+                                특별이벤트
+                            </p>
+                            <img src="./images/main_go_ico.png" alt="go"/>
+                        </a>
+                    </div>
+                    <div class="banner banner3">
+                        <a href="#">
+                            <span class="category3">특별 이벤트</span>
+                            <p class="titledark">
+                                SHOP에서 진행하는<br>
+                                특별이벤트
+                            </p>
+                            <img src="./images/main_go_ico.png" alt="go"/>
+                        </a>
+                    </div>
+                    <div class="banner banner4">
+                        <a href="#">
+                            <span class="category4">특별 이벤트</span>
+                            <p class="titledark">
+                                SHOP에서 진행하는<br>
+                                특별이벤트
+                            </p>
+                            <img src="./images/main_go_ico.png" alt="go"/>
+                        </a>
+                    </div>
+                    <div class="banner banner5">
+                        <a href="#">
+                            <span class="category5">특별 이벤트</span>
+                            <p class="titledark">
+                                SHOP에서 진행하는<br>
+                                특별이벤트
+                            </p>
+                            <img src="./images/main_go_ico.png" alt="go"/>
+                        </a>
+                    </div>
+                </article>
+            </section>
+            <section class="oneday">
+                <article></article>
+            </section>
+            <section class="vegetable">
+                <article>
+                    <ul>
+                        <li>1</li>
+                        <li>2</li>
+                        <li>3</li>
+                        <li>4</li>
+                    </ul>
+                </article>
+            </section>
+            <section class="premium">
+                <article></article>
+            </section>
+            <section class="seafood">
+                <article>
+                    <ul>
+                        <li>1</li>
+                        <li>2</li>
+                        <li>3</li>
+                        <li>4</li>
+                    </ul>
+                </article>
+            </section>
+        </main>
+        <footer>
+            <div>
+                <div></div>
+            </div>
+            <div>
+                <div></div>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>
