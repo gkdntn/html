@@ -155,29 +155,34 @@
             position: relative;
         }
         
-        .go .banner1{
-            width: 412px;
+        main > .go > article > .banner1 {
+            width: 412px; 
             height: 450px;
-            background-image:url(./images/main_go_bg1.png)}
+            background-image: url('./images/main_go_bg1.png');
+        }
         .go .banner2{width: 322px; height: 220px; margin-left: 11px;
             background-image:url(./images/main_go_bg2.png)}
-        .go .banner3{width: 322px; height: 220px; float: right;
+        .go .banner3{width: 322px; height: 220px; float: right; margin-left: 11px;
             background-image:url(./images/main_go_bg3.png)}
         .go .banner4{width: 322px; height: 220px; margin-left: 11px; margin-top: 10px;
             background-image:url(./images/main_go_bg4.png)}
-        .go .banner5{width: 322px; height: 220px; float: right; margin-top: 10px;
+        .go .banner5{width: 322px; height: 220px; float: right; margin-top: 10px; margin-left: 11px;
             background-image:url(./images/main_go_bg5.png)}
 
 
-        .go > article > .banner1 > a {
+        .go > article > .banner > a {
             position: absolute;
-            left: 36px;
-            top: 26px;
+            left: 26px;
+            top: 36px;
         }
         .go > article a > .category {
             font-weight: bold;
             font-size: 16px;
             color: #ff6312;
+        }
+
+        .go > article > .banner > a .title.dark {
+            color: #3c362a;
         }
 
         .go > article a > .title {
@@ -188,23 +193,35 @@
             line-height: 30px;
         }
 
+
+
         .go > article a > .title > i {
             display: block;
             margin-top: 24px;
             font-size: 14px;
         }
 
+        .oneday {
+            background-image: url('./images/oneday_bg.png');
+            background-size: cover;
+            background-position: 50% center;
+        }
+
+        .oneday > article img {margin-top: 50px;}
+
         .oneday > article {
             height: 188px;
         }
 
         .vegetable > article {
-            height: 660px;
+           padding: 60px 0px 40px;
+            box-sizing: border-box;
+            text-align: center;
         }
         .vegetable ul {
             width: 100%;
             height: 312px;
-            border: 1px solid gray;
+            margin-top: 36px;
             box-sizing: border-box;
             overflow: hidden;
         }
@@ -324,7 +341,7 @@
             </section>
             <section class="go">
                 <article>
-                    <div class="banner banenr1">
+                    <div class="banner banner1">
                         <a href="#">
                             <span class="category">생활야채</span>
                             <p class="title">
@@ -342,8 +359,8 @@
                     </div>
                     <div class="banner banner2">
                         <a href="#">
-                            <span class="category2">특별 이벤트</span>
-                            <p class="titledark">
+                            <span class="category">특별 이벤트</span>
+                            <p class="title dark">
                                 SHOP에서 진행하는<br>
                                 특별이벤트
                             </p>
@@ -352,30 +369,30 @@
                     </div>
                     <div class="banner banner3">
                         <a href="#">
-                            <span class="category3">특별 이벤트</span>
-                            <p class="titledark">
-                                SHOP에서 진행하는<br>
-                                특별이벤트
+                            <span class="category">하루야채</span>
+                            <p class="title">
+                                오늘의<br>
+                                할인상품!
                             </p>
                             <img src="./images/main_go_ico.png" alt="go"/>
                         </a>
                     </div>
                     <div class="banner banner4">
                         <a href="#">
-                            <span class="category4">특별 이벤트</span>
-                            <p class="titledark">
-                                SHOP에서 진행하는<br>
-                                특별이벤트
+                            <span class="category">프리미엄</span>
+                            <p class="title">
+                                SHOP에서 인증하는<br>
+                                프리미엄 상품
                             </p>
                             <img src="./images/main_go_ico.png" alt="go"/>
                         </a>
                     </div>
                     <div class="banner banner5">
                         <a href="#">
-                            <span class="category5">특별 이벤트</span>
-                            <p class="titledark">
-                                SHOP에서 진행하는<br>
-                                특별이벤트
+                            <span class="category">인기상품</span>
+                            <p class="title dark">
+                                SHOP의<br>
+                                인기상품
                             </p>
                             <img src="./images/main_go_ico.png" alt="go"/>
                         </a>
@@ -383,15 +400,46 @@
                 </article>
             </section>
             <section class="oneday">
-                <article></article>
+                <article>
+                    <a href="#"><img src="./images/oneday_txt.png" alt="번개장터"/></a>
+                </article>
             </section>
             <section class="vegetable">
                 <article>
-                    <ul>
-                        <li>1</li>
-                        <li>2</li>
-                        <li>3</li>
-                        <li>4</li>
+                    <img src="./images/vegetable_tit.png" alt="야채"/>
+                    <ul class="thumb_rolling">
+                        <li>
+                            <a href="#">
+                                <img src="./images/thumb1.jpg" alt="플레인요거트">
+                                <h1>플레인요거트 4개입</h1>
+                                <p>견과류, 과일과 같이 먹는 플레인 요거트</p>
+                                <h2>7,500원</h2>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="./images/thumb2.jpg" alt="더치커피">
+                                <h1>프랑스 더치커피</h1>
+                                <p>프랑스만의 방식으로 내려진 더치커피</p>
+                                <h2>5,000원</h2>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="./images/thumb3.jpg" alt="홍차">
+                                <h1>로얄밀크 홍차</h1>
+                                <p>일본에서 온 깊고 풍부한맛의 로얄밀크티</p>
+                                <h2>17,000원</h2>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="./images/thumb4.jpg" alt="핫초코">
+                                <h1>스위스 핫초코 320g</h1>
+                                <p>스위스에서 온 핫초코로 따뜻한 연말</p>
+                                <h2>4,000원</h2>
+                            </a>
+                        </li>
                     </ul>
                 </article>
             </section>

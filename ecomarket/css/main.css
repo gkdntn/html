@@ -240,6 +240,68 @@
             color: green;
         }
 
+        .new div:nth-of-type(3) > .txt {
+            font-size: 17px;
+            color: #564f47;
+            left: 30px;
+            top: 40px;
+        }
+        .new div:nth-of-type(3) > .tit {
+            font-size: 25px;
+            color: green;
+            left: 30px;
+            top : 70px
+        }
+
+        .new div:nth-of-type(4) > .txt {
+            font-size: 17px;
+            color: #564f47;
+            left: 30px;
+            top: 40px;
+        }
+        .new div:nth-of-type(4) > .tit {
+            font-size: 25px;
+            color: rgb(180, 36, 36);
+            left: 30px;
+            top : 100px
+        }
+
+        .new div:nth-of-type(5) > .txt {
+            font-size: 17px;
+            color: #564f47;
+            left: 30px;
+            top: 40px;
+        }
+        .new div:nth-of-type(5) > .tit {
+            font-size: 25px;
+            color: rgb(180, 36, 36);
+            left: 30px;
+            top : 90px
+        }
+
+        .new div > .price {
+            color: orange;
+            font-size: 30px;
+            bottom: 10px;
+            right: 10px;
+        }
+        .new div > .price::after {
+            content: "원";
+            font-size: 20px;
+        }
+        .new div:nth-of-type(3) > .price {
+            left: 20px;
+        }
+
+        .new div:nth-of-type(4) > .price {
+            left: 20px;
+        }
+        .new div:nth-of-type(5) > .price {
+            left: 20px;
+        }
+
+
+
         .new div:nth-child(2) {
             height: 50%;
             border-right: 1px solid #d4d4d4;
@@ -257,16 +319,49 @@
             height: 50%;
         } 
 
+        .master {
+            background-image: url(/ecomarket/images/main_master_bg.png);
+            background-size: 100% 100%;
+            background-attachment: fixed;
+        }
+
         .master article {
             height: 540px;
         }
         
         .master > article > div{
+            position: relative;
             float: left;
-            border: 1px solid pink;
+            border: 1px solid #d4d4d4;
+            border-right: 1px solid white;
             box-sizing: border-box;
             width: 25%;
             height: 334px;
+            background-color: white;
+        }
+        .master > article > div > img{
+            position: absolute;
+            width: 95%;
+            left: 8px;
+            top: 8px;
+        }
+        .master > article > div > .txt {
+            position: absolute;
+            font-size: 15px;
+            left: 10px;
+            bottom: 50px;
+            color: #564f47;
+        }
+        .master > article > div > .tit {
+            position: absolute;
+            color: #564f47;
+            left: 10px;
+            bottom: 15px;
+            font-size: 20px;
+        }
+
+        .master > article > div:nth-last-of-type(1){
+            border-right: 1px solid #d4d4d4;;
         }
 
         .gallary {
